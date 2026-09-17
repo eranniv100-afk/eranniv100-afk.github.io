@@ -3,175 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ניב — בניית אתרים ומערכות לעסקים</title>
-<meta name="description" content="בניית אתרים ומערכות ניהול לעסקים בישראל.">
-
+<title>ניב יצחקי — בניית אתרים ומערכות</title>
+<meta name="description" content="בניית אתרים ומערכות ניהול לעסקים. מדף נחיתה ועד מערכת מלאה. עברית מלאה, מותאם לנייד.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700;900&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;800;900&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--pine:#122019;--pine-2:#182B22;--paper:#F5F2E9;--saffron:#E0A030;--sage:#8FA396;--stone:#6E7A72;--line:rgba(245,242,233,.13)}
+:root{--ink:#070B14;--ink-2:#0D1424;--paper:#F6F7FB;--white:#FFFFFF;--text:#0B1220;--muted:#5A6478;--cyan:#22D3EE;--violet:#A78BFA;--line-d:rgba(255,255,255,.10);--line-l:rgba(11,18,32,.10)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--pine);color:var(--paper);font-family:'Assistant',system-ui,sans-serif;font-weight:300;font-size:clamp(16px,1.05vw,18px);line-height:1.7;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1000px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
-.top{display:flex;justify-content:space-between;align-items:baseline;padding:32px 0;border-bottom:1px solid var(--line);font-size:.82rem;letter-spacing:.06em;color:var(--sage)}
-.top strong{font-weight:600;color:var(--paper);letter-spacing:0}
-.hero{padding:clamp(64px,11vw,132px) 0 clamp(48px,7vw,80px)}
-.hero h1{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:clamp(2.3rem,6.4vw,4.6rem);line-height:1.08;letter-spacing:-.015em;max-width:17ch}
-.hero h1 em{font-style:normal;color:var(--saffron)}
-.hero p{margin-top:28px;max-width:46ch;font-size:clamp(1.02rem,1.5vw,1.22rem);color:var(--sage)}
-.facts{display:flex;flex-wrap:wrap;gap:clamp(28px,5vw,64px);margin-top:clamp(40px,6vw,64px);padding-top:28px;border-top:1px solid var(--line)}
-.fact b{display:block;font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:clamp(1.7rem,3.4vw,2.3rem);color:var(--saffron);line-height:1}
-.fact span{display:block;margin-top:8px;font-size:.84rem;color:var(--stone);letter-spacing:.03em}
-.eyebrow{font-size:.76rem;letter-spacing:.19em;color:var(--stone);padding-bottom:18px;border-bottom:1px solid var(--line);margin-bottom:clamp(32px,5vw,48px)}
-section{padding:clamp(56px,8vw,96px) 0}
-.job{display:grid;grid-template-columns:1fr .85fr;gap:clamp(24px,4vw,52px);align-items:start;padding:clamp(30px,4vw,44px) 0;border-bottom:1px solid var(--line)}
-.job:first-of-type{border-top:1px solid var(--line)}
-.job h3{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:clamp(1.4rem,2.7vw,1.95rem);line-height:1.25}
-.job .kind{display:inline-block;margin-bottom:12px;font-size:.75rem;letter-spacing:.14em;color:var(--saffron)}
-.job p{margin-top:14px;color:var(--sage);max-width:44ch}
-.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
-.stack li{list-style:none;font-size:.76rem;letter-spacing:.03em;color:var(--sage);border:1px solid var(--line);border-radius:2px;padding:4px 11px}
-.job a.visit{display:inline-block;margin-top:22px;color:var(--paper);text-decoration:none;font-size:.92rem;border-bottom:1px solid var(--saffron);padding-bottom:3px;transition:color .18s}
-.job a.visit:hover,.job a.visit:focus-visible{color:var(--saffron)}
-.shot{border:1px solid var(--line);background:var(--pine-2);aspect-ratio:16/10;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-.shot .empty{font-size:.8rem;color:var(--stone);text-align:center;padding:16px;line-height:1.5}
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:clamp(20px,3vw,34px)}
-.quote{border-inline-start:2px solid var(--saffron);padding-inline-start:22px}
-.quote blockquote{font-family:'Frank Ruhl Libre',serif;font-weight:400;font-size:clamp(1.05rem,1.7vw,1.25rem);line-height:1.55}
-.quote cite{display:block;margin-top:14px;font-style:normal;font-size:.84rem;color:var(--stone)}
-.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(24px,4vw,44px)}
-.how h4{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:1.18rem;margin-bottom:10px}
-.how p{color:var(--sage);font-size:.97rem}
-.contact{border-top:1px solid var(--line);padding:clamp(60px,9vw,110px) 0 clamp(52px,7vw,84px)}
-.contact h2{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.15;max-width:16ch}
-.contact p{margin-top:20px;color:var(--sage);max-width:42ch}
-.links{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-.links a{text-decoration:none;font-size:.95rem;padding:13px 26px;border:1px solid var(--line);color:var(--paper);transition:background .18s,border-color .18s,color .18s}
-.links a.primary{background:var(--saffron);border-color:var(--saffron);color:var(--pine);font-weight:600}
-.links a:hover,.links a:focus-visible{border-color:var(--saffron);color:var(--saffron)}
-.links a.primary:hover,.links a.primary:focus-visible{background:transparent;color:var(--saffron)}
-footer{padding:26px 0 40px;border-top:1px solid var(--line);font-size:.8rem;color:var(--stone)}
-a:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-@media (max-width:720px){.job{grid-template-columns:1fr}.shot{order:-1}}
+body{background:var(--paper);color:var(--text);font-family:'Heebo',system-ui,sans-serif;font-size:clamp(16px,1.05vw,18px);line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.hero{position:relative;min-height:100svh;background:radial-gradient(120% 90% at 70% 0%,#15203A 0%,var(--ink-2) 45%,var(--ink) 100%);color:#fff;display:flex;flex-direction:column;overflow:hidden}
+#scene{position:absolute;inset:0;z-index:0;opacity:0;transition:opacity 1.6s ease}
+#scene.on{opacity:1}
+.hero-glow{position:absolute;z-index:0;width:90vw;max-width:900px;aspect-ratio:1;left:50%;top:38%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(34,211,238,.13) 0%,rgba(167,139,250,.07) 40%,transparent 68%);pointer-events:none}
+.nav{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:28px 0;font-size:.86rem;letter-spacing:.04em;color:rgba(255,255,255,.62)}
+.nav b{font-family:'Rubik',sans-serif;font-weight:600;color:#fff;letter-spacing:0;font-size:1rem}
+.nav .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyan);margin-inline-end:8px;box-shadow:0 0 12px var(--cyan)}
+.hero-body{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding-bottom:80px}
+.tag{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;border:1px solid var(--line-d);border-radius:100px;padding:7px 16px;font-size:.79rem;letter-spacing:.09em;color:rgba(255,255,255,.75);backdrop-filter:blur(8px);background:rgba(255,255,255,.03);margin-bottom:30px}
+h1{font-family:'Rubik',sans-serif;font-weight:900;font-size:clamp(2.6rem,7.6vw,5.6rem);line-height:1.02;letter-spacing:-.03em;max-width:16ch}
+h1 .grad{background:linear-gradient(100deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero-body>p{margin-top:26px;max-width:44ch;font-size:clamp(1.04rem,1.6vw,1.26rem);color:rgba(255,255,255,.72);font-weight:300}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.btn{text-decoration:none;font-family:'Rubik',sans-serif;font-weight:500;font-size:.98rem;padding:15px 32px;border-radius:100px;transition:transform .2s cubic-bezier(.2,.8,.3,1),box-shadow .2s;display:inline-block}
+.btn.p{background:linear-gradient(100deg,var(--cyan),var(--violet));color:#050912;font-weight:700;box-shadow:0 10px 36px rgba(34,211,238,.28)}
+.btn.p:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(34,211,238,.42)}
+.btn.s{border:1px solid var(--line-d);color:#fff;background:rgba(255,255,255,.04)}
+.btn.s:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;font-size:.74rem;letter-spacing:.2em;color:rgba(255,255,255,.4);display:flex;flex-direction:column;align-items:center;gap:10px}
+.scroll-hint i{display:block;width:1px;height:38px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:drop 2s infinite}
+@keyframes drop{0%{opacity:0;transform:scaleY(.2)}40%{opacity:1}100%{opacity:0;transform:scaleY(1)}}
+.strip{background:var(--ink);color:#fff;border-top:1px solid var(--line-d)}
+.strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:clamp(20px,4vw,48px);padding-top:52px;padding-bottom:52px}
+.stat b{display:block;font-family:'Rubik',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1;background:linear-gradient(100deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat span{display:block;margin-top:10px;font-size:.88rem;color:rgba(255,255,255,.55)}
+section{padding:clamp(72px,10vw,128px) 0}
+.eyebrow{display:flex;align-items:center;gap:12px;font-family:'Rubik',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:.2em;color:var(--muted);margin-bottom:clamp(36px,5vw,56px)}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--line-l)}
+h2{font-family:'Rubik',sans-serif;font-weight:800;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.12;letter-spacing:-.02em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:clamp(18px,2.4vw,26px)}
+.card{position:relative;background:var(--white);border:1px solid var(--line-l);border-radius:20px;padding:clamp(26px,3vw,36px);transition:transform .28s cubic-bezier(.2,.8,.3,1),box-shadow .28s,border-color .28s;overflow:hidden}
+.card::before{content:"";position:absolute;inset-inline-start:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--cyan),var(--violet));transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.2,.8,.3,1)}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 60px rgba(11,18,32,.10);border-color:transparent}
+.card:hover::before{transform:scaleX(1)}
+.card .kind{display:inline-block;font-family:'Rubik',sans-serif;font-weight:500;font-size:.73rem;letter-spacing:.13em;color:#0E7490;background:rgba(34,211,238,.11);padding:5px 13px;border-radius:100px;margin-bottom:16px}
+.card h3{font-family:'Rubik',sans-serif;font-weight:700;font-size:clamp(1.24rem,2.2vw,1.55rem);line-height:1.3;letter-spacing:-.01em}
+.card p{margin-top:12px;color:var(--muted);font-size:.98rem}
+.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px;list-style:none}
+.stack li{font-size:.75rem;color:var(--muted);border:1px solid var(--line-l);border-radius:7px;padding:4px 11px}
+.card .link{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-family:'Rubik',sans-serif;font-weight:500;font-size:.93rem;color:#0E7490;text-decoration:none}
+.card .link:hover{text-decoration:underline}
+.card .note{margin-top:22px;font-size:.88rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.card .note::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--violet);flex:none}
+.quotes{background:var(--white);border-block:1px solid var(--line-l)}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(22px,3vw,40px)}
+.q blockquote{font-family:'Rubik',sans-serif;font-weight:400;font-size:clamp(1.08rem,1.8vw,1.3rem);line-height:1.6;letter-spacing:-.01em}
+.q .mark{font-family:'Rubik',sans-serif;font-weight:900;font-size:3rem;line-height:.6;background:linear-gradient(100deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:block;margin-bottom:14px}
+.q cite{display:block;margin-top:18px;font-style:normal;font-size:.88rem;color:var(--muted)}
+.q cite b{display:block;font-family:'Rubik',sans-serif;font-weight:600;color:var(--text);font-size:.96rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(24px,4vw,44px)}
+.step .n{font-family:'Rubik',sans-serif;font-weight:800;font-size:.9rem;width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(100deg,var(--cyan),var(--violet));color:#050912;margin-bottom:16px}
+.step h4{font-family:'Rubik',sans-serif;font-weight:700;font-size:1.16rem;margin-bottom:9px}
+.step p{color:var(--muted);font-size:.97rem}
+.contact{background:radial-gradient(100% 120% at 80% 0%,#15203A 0%,var(--ink-2) 50%,var(--ink) 100%);color:#fff;text-align:center}
+.contact h2{max-width:20ch;margin:0 auto}
+.contact p{margin-top:20px;color:rgba(255,255,255,.66);max-width:46ch;margin-inline:auto;font-weight:300}
+.contact .hero-cta{justify-content:center;margin-top:42px}
+footer{background:var(--ink);color:rgba(255,255,255,.38);font-size:.82rem;text-align:center;padding:30px 0;border-top:1px solid var(--line-d)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.8,.3,1),transform .75s cubic-bezier(.2,.8,.3,1)}
+.rv.in{opacity:1;transform:none}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.scroll-hint i{animation:none}html{scroll-behavior:auto}}
+@media (max-width:640px){.hero-body{padding-bottom:110px}.btn{padding:14px 26px;font-size:.93rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <strong>ניב</strong>
+<header class="hero">
+  <div class="hero-glow"></div>
+  <canvas id="scene"></canvas>
+  <div class="wrap nav">
+    <b><span class="dot"></span>ניב יצחקי</b>
     <span>בניית אתרים ומערכות · ישראל</span>
-  </header>
-
-  <div class="hero reveal">
-    <h1>אני בונה אתרים ומערכות ש<em>עובדים</em>.</h1>
+  </div>
+  <div class="wrap hero-body">
+    <span class="tag">זמין לפרויקטים חדשים</span>
+    <h1>אני בונה אתרים ומערכות <span class="grad">שעובדים</span>.</h1>
     <p>מדף נחיתה לעסק קטן ועד מערכת ניהול מלאה עם מסד נתונים והרשאות. הכל בעברית, הכל מותאם לנייד.</p>
-    <div class="facts">
-      <div class="fact"><b>4</b><span>עסקים אמיתיים</span></div>
-      <div class="fact"><b>Full-stack</b><span>צד לקוח, שרת, מסד נתונים</span></div>
-      <div class="fact"><b>עברית מלאה</b><span>RTL אמיתי, לא תרגום</span></div>
+    <div class="hero-cta">
+      <a class="btn p" href="https://wa.me/972556626446" target="_blank" rel="noopener">דברו איתי בוואטסאפ</a>
+      <a class="btn s" href="#work">לעבודות שלי</a>
     </div>
   </div>
+  <div class="scroll-hint"><span>גלול</span><i></i></div>
+</header>
 
-  <section id="work">
-    <p class="eyebrow">עבודות</p>
-
-    <article class="job reveal">
-      <div>
+<div class="strip">
+  <div class="wrap">
+    <div class="stat rv"><b>4+</b><span>עסקים אמיתיים באוויר</span></div>
+    <div class="stat rv"><b>Full-stack</b><span>צד לקוח · שרת · מסד נתונים</span></div>
+    <div class="stat rv"><b>עברית מלאה</b><span>RTL אמיתי, לא תרגום</span></div>
+  </div>
+</div>
+<section id="work">
+  <div class="wrap">
+    <p class="eyebrow rv">עבודות נבחרות</p>
+    <div class="grid">
+      <article class="card rv">
         <span class="kind">מערכת ניהול</span>
-        <h3>מערכת ניהול למשרד הנהלת חשבונות</h3>
-        <p>ניהול תיקי לקוחות, כספת מוצפנת לפרטי גישה, הרשאות לפי עובד, יומן פעולות מלא ודוחות.</p>
+        <h3>מערכת לניהול משרד הנהלת חשבונות</h3>
+        <p>ניהול תיקי לקוחות, כספת מוצפנת לפרטי גישה, הרשאות לפי עובד, יומן פעולות מלא ודוחות. רצה על שרת מקומי של המשרד.</p>
         <ul class="stack"><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>הצפנה</li><li>הרשאות</li></ul>
-      </div>
-      <div class="shot"><span class="empty">מערכת פנימית ללקוח · אשמח להדגים בשיחה</span></div>
-    </article>
-
-    <article class="job reveal">
-      <div>
+        <div class="note">מערכת פנימית ללקוח · אשמח להדגים בשיחה</div>
+      </article>
+      <article class="card rv">
         <span class="kind">אתר עסקי</span>
         <h3>אתר לעסק עוגות מעוצבות</h3>
-        <p>אתר מלא לעסק — גלריית עבודות, קטלוג, ופנייה ישירה בוואטסאפ.</p>
+        <p>אתר מלא לעסק — גלריית עבודות, קטלוג, ופנייה ישירה בוואטסאפ. נבנה כך שבעלת העסק מעדכנת אותו לבד.</p>
         <ul class="stack"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>מותאם נייד</li></ul>
-        <a class="visit" href="https://eranniv100-afk.github.io/noa-cakes/" target="_blank" rel="noopener">לצפייה באתר ↖</a>
-      </div>
-      <div class="shot"><span class="empty">לצפייה באתר החי ←</span></div>
-    </article>
-    <article class="job reveal">
-      <div>
+        <a class="link" href="https://eranniv100-afk.github.io/noa-cakes/" target="_blank" rel="noopener">לצפייה באתר החי ←</a>
+      </article>
+      <article class="card rv">
         <span class="kind">דף נחיתה</span>
         <h3>דף נחיתה לעסק סריגה</h3>
-        <p>דף אחד שמציג את העבודות ומוביל לפנייה. נטען מהר, נראה טוב בנייד.</p>
+        <p>דף אחד שמציג את העבודות ומוביל לפנייה. נטען מהר, נראה טוב בנייד, ועלה לאוויר תוך ימים.</p>
         <ul class="stack"><li>HTML</li><li>CSS</li><li>מותאם נייד</li></ul>
-        <a class="visit" href="#" target="_blank" rel="noopener">לצפייה בדף ↖</a>
-      </div>
-      <div class="shot"><span class="empty">פרויקט פרטי · אשמח להדגים בשיחה</span></div>
-    </article>
-
-    <article class="job reveal">
-      <div>
+        <div class="note">פרויקט פרטי · אשמח להדגים בשיחה</div>
+      </article>
+      <article class="card rv">
         <span class="kind">אפליקציית web</span>
         <h3>מערכת אישית לניהול יום־יום</h3>
-        <p>יומן, מעקב הוצאות ומנויים, ניהול משימות ואימונים — במקום אחד.</p>
+        <p>יומן, מעקב הוצאות ומנויים, ניהול משימות ואימונים — במקום אחד. נבנתה לשימוש יומיומי מהטלפון.</p>
         <ul class="stack"><li>React</li><li>Node.js</li><li>מסד נתונים</li><li>PWA</li></ul>
+        <div class="note">פרויקט אישי · אשמח להדגים בשיחה</div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="quotes">
+  <div class="wrap">
+    <p class="eyebrow rv">מה אומרים</p>
+    <div class="qgrid">
+      <div class="q rv">
+        <span class="mark">”</span>
+        <blockquote>ניב בנה לי את האתר לעסק. הוא הבין בדיוק מה רציתי, עבד מהר, והאתר יצא בדיוק כמו שדמיינתי. ממליצה בחום!</blockquote>
+        <cite><b>נועה סלנסקי</b>בעלת עסק עוגות מעוצבות</cite>
       </div>
-      <div class="shot"><span class="empty">פרויקט אישי · אשמח להדגים בשיחה</span></div>
-    </article>
-  </section>
-
-  <section id="quotes">
-    <p class="eyebrow">מה אומרים</p>
-    <div class="quotes reveal">
-      <div class="quote">
-        <blockquote>„ניב בנה לי את האתר לעסק. הוא הבין בדיוק מה רציתי, עבד מהר, והאתר יצא בדיוק כמו שדמיינתי. ממליצה בחום!”</blockquote>
-        <cite>— נועה סלנסקי, בעלת עסק עוגות מעוצבות</cite>
-      </div>
-      <div class="quote">
-        <blockquote>„ניב בנה לנו מערכת פנימית לניהול לקוחות, כולל אבטחת מידע והרשאות. עבודה יסודית, והתחשבות ברמת הרגישות של המידע שאנחנו עובדים איתו.”</blockquote>
-        <cite>— ערן יצחקי, בעל משרד הנהלת חשבונות</cite>
+      <div class="q rv">
+        <span class="mark">”</span>
+        <blockquote>ניב בנה לנו מערכת פנימית לניהול לקוחות, כולל אבטחת מידע והרשאות. עבודה יסודית, והתחשבות ברמת הרגישות של המידע שאנחנו עובדים איתו.</blockquote>
+        <cite><b>ערן יצחקי</b>בעל משרד הנהלת חשבונות</cite>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="how">
-    <p class="eyebrow">איך זה עובד</p>
-    <div class="how reveal">
-      <div><h4>שיחה קצרה</h4><p>מבינים מה העסק צריך ומה חשוב לך. בלי מונחים טכניים.</p></div>
-      <div><h4>הצעה ברורה</h4><p>מה בדיוק ייבנה, כמה זה עולה, ומתי זה מוכן. מחיר סגור מראש.</p></div>
-      <div><h4>בנייה ומסירה</h4><p>רואה גרסה עובדת תוך כדי. אחרי העלייה — שבועיים תיקונים כלולים.</p></div>
+<section>
+  <div class="wrap">
+    <p class="eyebrow rv">איך זה עובד</p>
+    <div class="steps">
+      <div class="step rv"><div class="n">1</div><h4>שיחה קצרה</h4><p>מבינים מה העסק צריך ומה חשוב לך. בלי מונחים טכניים.</p></div>
+      <div class="step rv"><div class="n">2</div><h4>הצעה ברורה</h4><p>מה בדיוק ייבנה, כמה זה עולה, ומתי זה מוכן. מחיר סגור מראש.</p></div>
+      <div class="step rv"><div class="n">3</div><h4>בנייה ומסירה</h4><p>רואה גרסה עובדת תוך כדי. אחרי העלייה לאוויר — שבועיים תיקונים כלולים.</p></div>
     </div>
-  </section>
-  <section class="contact reveal">
-    <h2>יש לך עסק שצריך אתר?</h2>
-    <p>ספר לי מה אתה צריך ואחזור אליך עם הצעה. השיחה הראשונה בחינם ובלי התחייבות.</p>
-    <div class="links">
-      <a class="primary" href="https://wa.me/972556626446" target="_blank" rel="noopener">שלח וואטסאפ</a>
-      <a href="mailto:eranniv100@gmail.com">מייל</a>
-      <a href="https://github.com/eranniv100-afk" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <h2 class="rv">יש לך עסק שצריך אתר?</h2>
+    <p class="rv">ספר לי מה אתה צריך ואחזור אליך עם הצעה. השיחה הראשונה בחינם ובלי התחייבות.</p>
+    <div class="hero-cta rv">
+      <a class="btn p" href="https://wa.me/972556626446" target="_blank" rel="noopener">שלח וואטסאפ</a>
+      <a class="btn s" href="mailto:eranniv100@gmail.com">eranniv100@gmail.com</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>© 2026 · נבנה בעצמי</footer>
-</div>
-
+<footer>© 2026 ניב יצחקי · נבנה בעצמי</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
-  var els = document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    els.forEach(function(el){ el.classList.add('in'); });
-    return;
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')}); return;
   }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e,i){ if(e.isIntersecting){ setTimeout(function(){e.target.classList.add('in')}, i*70); io.unobserve(e.target);} });
   },{threshold:.12});
-  els.forEach(function(el){ io.observe(el); });
+  els.forEach(function(e){io.observe(e)});
+})();
+
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cv=document.getElementById('scene');
+  if(!cv||typeof THREE==='undefined'||reduce) return;
+  var renderer;
+  try{ renderer=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true}); }catch(e){ return; }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  var host=cv.parentElement;
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(46,1,0.1,100);
+  camera.position.z=7.2;
+  var group=new THREE.Group();
+  scene.add(group);
+  var shell=new THREE.Mesh(new THREE.IcosahedronGeometry(2.45,1), new THREE.MeshBasicMaterial({color:0x22D3EE,wireframe:true,transparent:true,opacity:.34}));
+  group.add(shell);
+  var core=new THREE.Mesh(new THREE.IcosahedronGeometry(1.55,0), new THREE.MeshBasicMaterial({color:0xA78BFA,wireframe:true,transparent:true,opacity:.5}));
+  group.add(core);
+  var N=520, pos=new Float32Array(N*3);
+  for(var i=0;i<N;i++){
+    var r=4.2+Math.random()*4.6, th=Math.random()*Math.PI*2, ph=Math.acos(2*Math.random()-1);
+    pos[i*3]=r*Math.sin(ph)*Math.cos(th);
+    pos[i*3+1]=r*Math.sin(ph)*Math.sin(th);
+    pos[i*3+2]=r*Math.cos(ph);
+  }
+  var pg=new THREE.BufferGeometry();
+  pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  var dust=new THREE.Points(pg,new THREE.PointsMaterial({color:0x9BE8F5,size:.035,transparent:true,opacity:.6}));
+  scene.add(dust);
+  var mx=0,my=0,tx=0,ty=0,sc=0;
+  window.addEventListener('mousemove',function(e){ tx=(e.clientX/window.innerWidth-.5)*2; ty=(e.clientY/window.innerHeight-.5)*2; },{passive:true});
+  window.addEventListener('scroll',function(){ sc=window.scrollY; },{passive:true});
+  function size(){ var w=host.clientWidth,h=host.clientHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+  window.addEventListener('resize',size); size();
+  var t0=performance.now();
+  (function loop(now){
+    requestAnimationFrame(loop);
+    var tt=(now-t0)/1000;
+    mx+=(tx-mx)*.05; my+=(ty-my)*.05;
+    group.rotation.y = tt*.16 + mx*.5;
+    group.rotation.x = Math.sin(tt*.22)*.14 + my*.32;
+    core.rotation.y = -tt*.3; core.rotation.z = tt*.12;
+    dust.rotation.y = tt*.035;
+    var f=Math.min(sc/700,1);
+    group.position.y = f*1.6;
+    group.scale.setScalar(1-f*.22);
+    camera.position.z = 7.2 + f*2.2;
+    renderer.render(scene,camera);
+  })(t0);
+  requestAnimationFrame(function(){ cv.classList.add('on'); });
 })();
 </script>
 </body>
